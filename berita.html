@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Kampung Kajasi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .berita-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .berita-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .berita-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 5px solid #3498db;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .berita-item h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .berita-item p {
+            line-height: 1.6;
+        }
+        .berita-item small {
+            color: #888;
+        }
+
+        /* Galeri horizontal */
+        .galeri-barisan {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .galeri-item img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<script>
+    // Tambahkan class loaded saat halaman selesai dimuat
+    window.addEventListener("load", function() {
+        document.body.classList.add("loaded");
+    });
+</script>
+<script>
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function(e) {
+            const href = this.getAttribute("href");
+            if (href && href.endsWith(".html")) { // hanya untuk link halaman internal
+                e.preventDefault();
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // delay sesuai durasi animasi
+            }
+        });
+    });
+</script>
+
+<body>
+
+    <header>
+        <div class="header-bg">
+            <h1>Berita Kampung Kajasi</h1>
+            <p>Update Informasi dan Kegiatan Terkini</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Profil</a></li>
+                <li><a href="struktur.html">Struktur</a></li>
+                <li><a href="berita.html" class="active">Berita</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="mata-pencaharian.html">Mata Pencaharian</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="berita-container">
+            <h2>Berita Terkini</h2>
+
+            <!-- Berita 1 -->
+            <div class="berita-item">
+                <h3>Peluncuran Website Resmi Kampung Kajasi</h3>
+                <small>18 Agustus 2025</small>
+                <p>
+                    Kami dengan bangga mengumumkan peluncuran website resmi Kampung Kajasi sebagai wadah informasi dan promosi potensi lokal.
+                </p>
+            </div>
+
+            <!-- Berita 2 (dengan galeri menyamping) -->
+            <div class="berita-item">
+                <div class="galeri-barisan">
+                    <div class="galeri-item">
+                        <img src="berita/bersih.jpeg" alt="Kegiatan 1">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/bersih2.jpeg" alt="Kegiatan 2">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/bersih3.jpeg" alt="Kegiatan 3">
+                    </div>
+                </div>
+
+                <h3>Kegiatan Bersih Kampung</h3>
+                <small>22 Juli 2025</small>
+                <p>
+                    Kampung Kajasi – Dalam semangat menjaga kebersihan dan kenyamanan lingkungan, warga Kampung Kajasi bersama mahasiswa KKN melaksanakan kegiatan gotong royong membersihkan halaman kampung pada Minggu (tanggal kegiatan). Aksi ini mencakup pembersihan area sekitar balai kampung, jalan utama, dan halaman rumah warga.
+                </p>
+                <p>
+                    Kegiatan ini bertujuan untuk menciptakan lingkungan yang bersih, sehat, dan indah sekaligus mempererat rasa kebersamaan antarwarga. Antusiasme warga terlihat dari keikutsertaan semua kalangan, mulai dari anak-anak hingga orang tua.
+                </p>
+                <p>
+                    “Dengan kegiatan seperti ini, kami berharap kesadaran masyarakat akan pentingnya kebersihan lingkungan semakin meningkat,” ujar Kepala Kampung Kajasi.
+                </p>
+                <p>
+                    Aksi bersih-bersih ini merupakan bagian dari rangkaian program pemberdayaan masyarakat yang dilaksanakan selama masa KKN, sekaligus sebagai bentuk nyata kepedulian terhadap kelestarian lingkungan kampung.
+                </p>
+            </div>
+            <div class="berita-item">
+                <div class="galeri-barisan">
+                    <div class="galeri-item">
+                        <img src="berita/acara.jpeg" alt="Kegiatan 1">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/acara1.jpeg" alt="Kegiatan 2">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/acara2.jpeg" alt="Kegiatan 3">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/acara4.jpeg" alt="Kegiatan 4">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/acara5.jpeg" alt="Kegiatan 5">
+                    </div>
+                </div>
+
+                <h3>Perayaan 1 Abad SD YPK Bait El Aryom Soryar</h3>
+                <small>1 Agustus 2025</small>
+                <p>
+                    SD YPK Bait El Aryom Soryar yang berlokasi di Kampung Kajasi menggelar perayaan satu abad berdirinya sekolah tersebut dengan penuh khidmat dan sukacita pada Jumat, 1 Agustus 2025. Kegiatan ini menjadi momen bersejarah bagi sekolah, guru, alumni, dan seluruh masyarakat sebagai bentuk penghargaan atas dedikasi lembaga pendidikan yang telah berkontribusi besar dalam mencerdaskan generasi selama 100 tahun.
+                </p>
+            </div>
+            <div class="berita-item">
+                <div class="galeri-barisan">
+                    <div class="galeri-item">
+                        <img src="berita/bola.jpeg" alt="Pemain Bola">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/bola2.jpeg" alt="Pemain Bola">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/bola3.jpeg" alt="Pemain Bola">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/bola4.jpeg" alt="Pemain Bola">
+                    </div>
+                </div>
+
+                <h3>Pemain Bola Unggulan Pemuda Kampung Kajasi</h3>
+                <small>10 Agustus 2025</small>
+                <p>
+                    Pemuda Kampung Kajasi dikenal memiliki semangat juang tinggi dalam olahraga sepak bola. Dengan keterampilan bermain yang terus diasah melalui latihan rutin dan pertandingan antar kampung, mereka menjadi kebanggaan masyarakat setempat. Kecepatan, kerjasama tim, dan sportivitas yang ditunjukkan di lapangan membuat para pemain bola pemuda ini tidak hanya berprestasi, tetapi juga menjadi inspirasi bagi generasi muda untuk aktif dan berprestasi di bidang olahraga.
+                </p>
+            </div>
+            <div class="berita-item">
+                <div class="galeri-barisan">
+                    <div class="galeri-item">
+                        <img src="berita/lomba.jpeg" alt="Lomba 17 Agustus">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/lomba1.jpeg" alt="Lomba 17 Agustus">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/lomba2.jpeg" alt="Lomba 17 Agustus">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/lomba3.jpeg" alt="Lomba 17 Agustus">
+                    </div>
+                </div>
+
+                <h3>Lomba Pantai Meriahkan Kemerdekaan di Kampung Kajasi</h3>
+                <small>13 Agustus 2025</small>
+                <p>
+                    Dalam rangka memperingati Hari Ulang Tahun Kemerdekaan Republik Indonesia, Kampung Kajasi menggelar berbagai lomba seru di tepi pantai yang indah. Kegiatan ini menjadi ajang kebersamaan warga, mempererat tali silaturahmi, sekaligus memeriahkan suasana perayaan kemerdekaan dengan penuh semangat dan keceriaan. Beragam lomba tradisional dan hiburan pantai diikuti oleh semua kalangan, menjadikan acara ini sebagai momen yang ditunggu-tunggu setiap tahunnya.
+                </p>
+            </div>
+            <div class="berita-item">
+                <div class="galeri-barisan">
+                    <div class="galeri-item">
+                        <img src="berita/plang.jpeg" alt="Plang 7K">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="berita/plang1.jpeg" alt="Plang Sampah">
+                    </div>
+                    
+                </div>
+                <h3>Pemasangan Plang 7K dan Plang Sampah di Kampung Kajasi</h3>
+                <small>11 Agustus 2025</small>
+                <p>
+                    Sebagai bentuk kepedulian terhadap kebersihan dan keindahan lingkungan, masyarakat Kampung Kajasi bersama tim KKN melakukan pemasangan plang 7K (Kebersihan, Keindahan, Ketertiban, Keamanan, Kerindangan, Kesehatan, dan Kenyamanan) serta plang sampah di sejumlah titik strategis. Pemasangan ini bertujuan untuk mengedukasi dan mengingatkan warga agar senantiasa menjaga lingkungan tetap bersih, tertib, dan nyaman. Dengan adanya plang ini, diharapkan kesadaran masyarakat terhadap pentingnya menjaga kebersihan dapat semakin meningkat, sehingga tercipta lingkungan kampung yang sehat dan asri.
+                </p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

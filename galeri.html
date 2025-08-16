@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Kampung Kajasi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .galeri-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .galeri-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .galeri-item {
+            text-align: center;
+        }
+    </style>
+</head>
+<script>
+    // Tambahkan class loaded saat halaman selesai dimuat
+    window.addEventListener("load", function() {
+        document.body.classList.add("loaded");
+    });
+</script>
+<script>
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function(e) {
+            const href = this.getAttribute("href");
+            if (href && href.endsWith(".html")) { // hanya untuk link halaman internal
+                e.preventDefault();
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // delay sesuai durasi animasi
+            }
+        });
+    });
+</script>
+
+<body>
+
+    <header>
+        <div class="header-bg">
+            <h1>Galeri Kampung Kajasi</h1>
+            <p>Kumpulan Foto-Foto Kampung</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Profil</a></li>
+                <li><a href="struktur.html">Struktur</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="galeri.html" class="active">Galeri</a></li>
+                <li><a href="mata-pencaharian.html">Mata Pencaharian</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="galeri-container">
+            <div class="galeri-item">
+                <img src="img/pemandngan.jpeg" alt="Pemandangan Kampung">
+                <p>Pemandangan Kampung</p>
+            </div>
+            <div class="galeri-item">
+                <img src="img/dpngereja.jpeg" alt="Gereja">
+                <p>Gereja</p>
+            </div>
+            <div class="galeri-item">
+                <img src="img/gereja.jpeg" alt="Gereja">
+                <p>Gereja</p>
+            </div>
+            <div class="galeri-item">
+                <img src="img/kampungnya.jpeg" alt="kampung Kajasi">
+                <p>Kampung Kajasi</p>
+            </div>
+            <div class="galeri-item">
+                <img src="img/jalan2.jpeg" alt="Jalan Kampung">
+                <p>Jalan Kampung</p>
+            </div>
+            <div class="galeri-item">
+                <img src="img/jalan.jpeg" alt="Jalan Kampung">
+                <p>Jalan Kampung</p>
+            </div>
+            <div class="galeri-item">
+                <img src="img/perumahan.jpeg" alt="Perumahan">
+                <p>Perumahan</p>
+            </div>
+            <div class="galeri-item">
+                <img src="img/rumah2.jpeg" alt="Perumahan">
+                <p>Perumahan</p>
+            </div>
+            <div class="galeri-item">
+                <img src="img/rumah3.jpeg" alt="Perumahan">
+                <p>Perumahan</p>
+            </div>
+            <div class="galeri-item">
+                <img src="img/rumah4.jpeg" alt="Perumahan">
+                <p>Perumahan</p>
+            </div>
+            <div class="galeri-item">
+                <img src="galeri/sekolah1.jpeg" alt="sekolah">
+                <p>SD YPK BAITEL ARYOM SORYAR</p>
+            </div>
+            <div class="galeri-item">
+                <img src="galeri/sekolah2.jpeg" alt="sekolah">
+                <p>SD YPK BAITEL ARYOM SORYAR</p>
+            </div>
+            <div class="galeri-item">
+                <img src="galeri/sekolah3.jpeg" alt="sekolah">
+                <p>SD YPK BAITEL ARYOM SORYAR</p>
+            </div>
+            <div class="galeri-item">
+                <img src="galeri/sekolah4.jpeg" alt="sekolah">
+                <p>SD YPK BAITEL ARYOM SORYAR</p>
+            </div>
+            <!-- Tambah foto lagi jika perlu -->
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampung Kajasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    // Tambahkan class loaded saat halaman selesai dimuat
+    window.addEventListener("load", function() {
+        document.body.classList.add("loaded");
+    });
+</script>
+<script>
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function(e) {
+            const href = this.getAttribute("href");
+            if (href && href.endsWith(".html")) { // hanya untuk link halaman internal
+                e.preventDefault();
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // delay sesuai durasi animasi
+            }
+        });
+    });
+</script>
+
+<body>
+
+    <header>
+        <div class="header-bg">
+            <h1>Selamat Datang di Kampung Kajasi</h1>
+            <p>Informasi dan Kegiatan Kampung</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Profil</a></li>
+                <li><a href="struktur.html">Struktur</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="mata-pencaharian.html">Mata Pencaharian</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="box">
+            <h2>Profil Kampung Kajasi</h2>
+            <p>
+                Kampung Kajasi adalah salah satu kampung yang terletak di Distrik Biak Timur, Kabupaten Biak Numfor, Provinsi Papua. 
+                Dikelilingi oleh keindahan alam yang asri dan suasana masyarakat yang harmonis, Kajasi dikenal sebagai kampung yang kaya akan nilai budaya, gotong royong, dan semangat kebersamaan.
+            </p>
+            <p>
+                Dengan jumlah penduduk yang sebagian besar bekerja sebagai nelayan, petani, dan pelaku usaha mikro, Kajasi tumbuh menjadi kampung yang mandiri dan terus berkembang. 
+                Warga Kampung Kajasi menjunjung tinggi adat istiadat serta aktif dalam berbagai kegiatan sosial, keagamaan, dan pembangunan kampung. Dalam bidang pendidikan dan teknologi, Kampung Kajasi mulai menunjukkan kemajuan dengan hadirnya berbagai program pemberdayaan masyarakat, termasuk pelatihan digital untuk anak-anak dan remaja.
+            </p>
+            <p>
+                Potensi sumber daya alam dan sumber daya manusianya yang besar menjadikan Kajasi sebagai kampung yang strategis untuk pengembangan ekonomi lokal dan pariwisata berbasis kearifan lokal.
+                 Dengan komitmen bersama antara pemerintah kampung dan masyarakat, Kampung Kajasi siap menuju masa depan yang lebih maju, mandiri, dan sejahtera tanpa meninggalkan akar budaya yang menjadi identitas utama masyarakatnya.
+            </p>
+        </section>
+        <section class="box">
+            <h2>Data Penduduk</h2>
+            <p>
+                Kampung Kajasi memiliki jumlah penduduk sebanyak 458 orang, dan jika dihitung secara keseluruhan mencapai 510 jiwa. Jumlah laki-laki di kampung ini hampir lebih banyak dibandingkan perempuan, dengan sekitar 300 kepala keluarga yang sebagian besar bekerja sebagai petani dan nelayan, bahkan ada yang mengerjakan keduanya sekaligus. Pendapatan masyarakat pun tidak menentu karena bergantung pada hasil alam. Selain itu, ibu-ibu di Kampung Kajasi juga aktif dalam kegiatan kerajinan tangan melalui kelompok PKK, yang dipimpin oleh Ibu PJ, sekaligus Ibu Camat. Hasil kerajinan tersebut dijual di berbagai tempat, seperti di pinggir jalan, pasar, kampung, serta ke wilayah Serui dan Mamberamo.
+            </p>
+        </section>
+            </p>
+        </section>
+        <section class="box">
+        <h2>Potensi Kampung Kajasi</h2>
+        <p>Kampung Kajasi memiliki berbagai potensi seperti:</p>
+        
+            <li>Perikanan dan hasil laut</li>
+            <li>Wisata bahari dan pantai</li>
+            <li>Kerajinan tangan dan seni budaya lokal</li>
+            <li>Pertanian dan hasil kebun</li>
+        
+        </section>
+        <section class="box">
+            <h2>Lokasi Kampung Kajasi</h2>
+            <p>
+                Lokasi Kampung Kajasi dapat dilihat secara detail melalui Google Maps berikut ini, untuk memudahkan Anda dalam menemukan dan mengunjungi kampung tersebut.
+                <li>Lokasi Kampung : <a href="https://maps.app.goo.gl/UH7FGqUYzvXr7Y5e8">Kunjungi Kampung</a><li\>
+            </p>
+        </section>
+        <section class="box">
+            <h2>Peta Kampung Kajasi</h2>
+            <p>
+                 <div class="galeri-item">
+                        <img src="img/peta.jpg" alt="Peta Kajasi">
+                    </div>
+            </p>
+            <h2><li>Deskripsi Peta Kampung Kajasi</li></h2>
+            <p>
+                 Peta ini menunjukkan batas wilayah administratif Kampung Kajasi yang terletak di Distrik Biak Timur, Kabupaten Biak Numfor. Peta disusun dalam skala 1:3.000 dan menggambarkan dengan jelas batas kampung, jalan utama, serta area sekitarnya seperti Soryar, Wadetbo, dan Yenssari. Luas wilayah Kampung Kajasi tercatat sekitar 60,304 hektar.
+
+Peta ini dibuat menggunakan sistem proyeksi Universal Transverse Mercator (UTM) dengan referensi WGS 1984, dan disusun oleh mahasiswa KKN Universitas Cenderawasih tahun 2025 sebagai bagian dari program digitalisasi informasi kampung.
+            </p>
+        </section>
+
+        
+    </main>
+
+</body>
+</html>

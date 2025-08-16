@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Pencaharian - Kampung Kajasi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .berita-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .berita-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 5px solid #27ae60;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .berita-item h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .berita-item p {
+            line-height: 1.6;
+        }
+        .galeri-barisan {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .galeri-item img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<script>
+    // Tambahkan class loaded saat halaman selesai dimuat
+    window.addEventListener("load", function() {
+        document.body.classList.add("loaded");
+    });
+</script>
+<script>
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function(e) {
+            const href = this.getAttribute("href");
+            if (href && href.endsWith(".html")) { // hanya untuk link halaman internal
+                e.preventDefault();
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // delay sesuai durasi animasi
+            }
+        });
+    });
+</script>
+
+<body>
+
+<header>
+    <div class="header-bg">
+        <h1>Mata Pencaharian</h1>
+        <p>Pekerjaan Utama Warga Kampung Kajasi</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Profil</a></li>
+            <li><a href="struktur.html">Struktur</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="mata-pencaharian.html" class="active">Mata Pencaharian</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="berita-container">
+
+        <div class="berita-item">
+            <div class="galeri-barisan">
+                <div class="galeri-item">
+                    <img src="pekerjaan/nelayan.jpeg" alt="Perahu Nelayan">
+                </div>
+                <div class="galeri-item">
+                    <img src="pekerjaan/nelayan1.jpeg" alt="Perahu Nelayan">
+                </div>
+                <div class="galeri-item">
+                    <img src="pekerjaan/nelayan2.jpeg" alt="Nelayan">
+                </div>
+                <div class="galeri-item">
+                    <img src="pekerjaan/nelayan3.jpeg" alt="Nelayan">
+                </div>
+            </div>
+            <h3>Perikanan</h3>
+            <p>
+                Sebagian besar masyarakat Kampung Kajasi menggantungkan hidup sebagai nelayan tradisional. Setiap pagi, mereka berlayar dengan perahu sederhana untuk menangkap berbagai jenis ikan seperti ikan ekor kuning, ikan tuna, cumi-cumi, kepiting, ikan cakalang, gurita, dan beberapa jenis ikan lainnya. Hasil tangkapan biasanya dijual di pasar lokal atau dikonsumsi untuk kebutuhan sehari-hari. Meskipun bergantung pada cuaca dan musim, profesi nelayan menjadi sumber penghidupan utama yang diwariskan turun-temurun di kampung ini.
+            </p>
+        </div>
+
+        <div class="berita-item">
+            <div class="galeri-barisan">
+                <div class="galeri-item">
+                    <img src="pekerjaan/kerajinan.jpeg" alt="kerajinan">
+                </div>
+                <div class="galeri-item">
+                    <img src="pekerjaan/kerajinan2.jpeg" alt="kerajinan">
+                </div>
+                <div class="galeri-item">
+                    <img src="pekerjaan/kerajinan3.jpeg" alt="kerajinan">
+                </div>
+                <div class="galeri-item">
+                    <img src="pekerjaan/kerajinan4.jpeg" alt="kerajinan">
+                </div>
+            </div>
+            <h3>Kerajinan Tangan Tradisional Kampung Kajasi</h3>
+            <p>
+                Warga Kampung Kajasi, khususnya para ibu-ibu, aktif membuat berbagai kerajinan tangan yang memadukan bahan alami dan sentuhan budaya lokal. Pada gambar terlihat aneka topi dan hiasan kepala yang dihiasi bulu warna-warni, mencerminkan kekayaan seni tradisional Papua.
+Selain itu, terdapat anyaman berbentuk piring yang dibuat dari rotan atau daun pandan kering.
+
+Kerajinan ini dipasarkan di Pasar Bosnik dan kadang dijual hingga ke luar Kota Biak, khususnya ke Mamberamo. Produk-produk ini menjadi cenderamata khas yang banyak diminati wisatawan maupun pembeli dari daerah lain.
+Kegiatan kerajinan tangan ini tidak hanya menjadi sumber penghasilan tambahan bagi warga, tetapi juga berperan penting dalam melestarikan warisan budaya kampung.
+        </div>
+
+        <div class="berita-item">
+            <div class="galeri-barisan">
+                <div class="galeri-item">
+                    <img src="pekerjaan/produk.jpeg" alt="Kerajinan Tangan">
+                </div>
+                <div class="galeri-item">
+                    <img src="pekerjaan/produk1.jpeg" alt="Kerajinan Tangan">
+                </div>
+                <div class="galeri-item">
+                    <img src="pekerjaan/produk2.jpeg" alt="Kerajinan Tangan">
+                </div>
+                <div class="galeri-item">
+                    <img src="pekerjaan/produk3.jpeg" alt="Kerajinan Tangan">
+                </div>
+            </div>
+            <h3>Produk Unggulan Kampung Kajasi</h3>
+            <p>
+                Sebagai bagian dari upaya melestarikan budaya sekaligus meningkatkan perekonomian, masyarakat Kampung Kajasi terus mengembangkan berbagai produk unggulan berbasis kearifan lokal. Peralatan makan tradisional dan kapur khas Biak Papua merupakan dua hasil karya yang diolah secara turun-temurun, mencerminkan keterampilan, kreativitas, dan identitas budaya masyarakat setempat. Peralatan makan ini dibuat secara manual dari bahan alami seperti kayu dan bambu, menggunakan teknik tradisional yang ramah lingkungan sekaligus bernilai seni tinggi. Sementara itu, kapur khas Biak Papua diolah dari bahan pilihan melalui proses tradisional, menghasilkan tekstur halus dan warna putih bersih. Kapur ini menjadi pelengkap penting dalam tradisi mengunyah pinang, yang merupakan bagian tak terpisahkan dari kehidupan masyarakat Papua. Kedua produk ini tidak hanya dimanfaatkan dalam keseharian, tetapi juga dipasarkan sebagai salah satu sumber pendapatan usaha, membantu memenuhi kebutuhan keluarga sekaligus menjaga kelestarian keterampilan dan warisan budaya daerah.
+            </p>
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kampung Kajasi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .kontak-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .kontak-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .kontak-item {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        .kontak-item strong {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<script>
+    // Tambahkan class loaded saat halaman selesai dimuat
+    window.addEventListener("load", function() {
+        document.body.classList.add("loaded");
+    });
+</script>
+<script>
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function(e) {
+            const href = this.getAttribute("href");
+            if (href && href.endsWith(".html")) { // hanya untuk link halaman internal
+                e.preventDefault();
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // delay sesuai durasi animasi
+            }
+        });
+    });
+</script>
+
+<body>
+
+    <header>
+        <div class="header-bg">
+            <h1>Kontak Kampung Kajasi</h1>
+            <p>Hubungi Kami untuk Informasi Lebih Lanjut</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Profil</a></li>
+                <li><a href="struktur.html">Struktur</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="mata-pencaharian.html">Mata Pencaharian</a></li>
+                <li><a href="kontak.html" class="active">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="kontak-container">
+            <h2>Informasi Kontak</h2>
+            
+            <div class="kontak-item">
+                <strong>Telepon:</strong> +62 821-9955-2185
+            </div>
+            
+            <div class="kontak-item">
+                <strong>Email:</strong> kampungkajasi@gmail.com
+            </div>
+            
+            <div class="kontak-item">
+                <strong>Instagram:</strong> @kknkajasi.2025
+            </div>
+
+            <div class="kontak-item">
+                <strong>Tiktok:</strong>    @kknuncen.kajasi.20
+            </div>
+
+            <div class="kontak-item">
+                <strong>Alamat:</strong> Kampung Kajasi, Distrik Biak Timur, Kabupaten Biak Numfor, Papua
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
