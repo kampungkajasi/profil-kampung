@@ -4,6 +4,13 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+p {
+    margin: 20px 0;
+}
+p {
+    text-align: justify;
+    line-height: 1.6;
+}
 
 body {
     background-color: #f4f4f4;
@@ -105,4 +112,5 @@ body.fade-out {
         padding: 10px;
     }
 }
+
 
